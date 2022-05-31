@@ -17,4 +17,4 @@ WORKDIR /app
 
 ENV PYTHONPATH /app
 
-CMD ["/app/manage.py"] 
+CMD ["/app/main.py"] 

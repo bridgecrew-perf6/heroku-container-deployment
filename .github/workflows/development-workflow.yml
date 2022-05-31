@@ -82,6 +82,10 @@ jobs:
           heroku_email: "${{ secrets.HEROKU_EMAIL }}"
           usedocker: true
           docker_heroku_process_type: web
+          docker_build_args: |
+            FLASK_ENV
+          env:
+            FLASK_ENV: ${{ secrets.FLASK_ENV }}
 
   Test-Remote:
     name: Test Remote Deployment
