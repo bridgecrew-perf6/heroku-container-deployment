@@ -81,9 +81,7 @@ jobs:
           heroku_app_name: "${{ env.APP_NAME }}-dev" #Must be unique in Heroku
           heroku_email: "${{ secrets.HEROKU_EMAIL }}"
           usedocker: true
-        env:
-          HD_FLASK_ENV: ${{secrets.FLASK_ENV}}
-          HD_FLASK_APP: ${{secrets.FLASK_APP}}
+          docker_heroku_process_type: web
 
   Test-Remote:
     name: Test Remote Deployment
