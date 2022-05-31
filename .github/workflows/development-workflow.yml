@@ -59,7 +59,7 @@ jobs:
 
     - name: Test application
       run: |
-        FLASK_APP=${{secrets.FLASK_APP}} FLASK_ENV=${{secrets.FLASK_ENV}} python manage.py &
+        FLASK_APP=${{secrets.FLASK_APP}} FLASK_ENV=${{secrets.FLASK_ENV}} python main.py &
         sleep 10
         curl http://127.0.0.1:5000/api/v1/
 
